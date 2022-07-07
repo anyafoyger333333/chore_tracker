@@ -13,8 +13,8 @@
 		
 		<!-- javascript had to be placed above the css load for materialize related javascript objects to be used. -->
 		<!-- for the correct modal jquery, import in the followinng order: (1) css, (2) jquery, (3) js -->
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/materialize.min.css') }}"/>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/custom_styling.css') }}"/>
+		<!-- Compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 		<!-- Icon resources-->
 		<!-- Google Material Icons -->
@@ -30,6 +30,19 @@
 	</head>
 
 	<body style="background-color:#263238;">
+		<!-- NavBar -->
+		<nav>
+		    <div class="nav-wrapper">
+		    	<a href="#" class="brand-logo">Logo</a>
+		      	<ul id="nav-mobile" class="right hide-on-med-and-down">
+		        	<li><a href="sass.html">Sass</a></li>
+		        	<li><a href="badges.html">Components</a></li>
+		        	<li><a href="collapsible.html">JavaScript</a></li>
+		      	</ul>
+		    </div>
+		</nav>
+
+
 		<h1>Hello World</h1>
 		<div class="container">
 		  <div draggable="true" class="box">A</div>
@@ -37,6 +50,8 @@
 		  <div draggable="true" class="box">C</div>
 		</div>
 
+		<!-- Compiled and minified JavaScript -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	</body>
 	
 	
