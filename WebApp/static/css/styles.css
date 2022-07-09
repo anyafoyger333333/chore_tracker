@@ -1,0 +1,83 @@
+/*
+Color Pallette Chosen by Tianna will be Red, Blue, & Yellow
+They are defined as custom class names below
+*/
+.pastel_blu_1 {
+	--c: #82C8E2;
+	color: #82C8E2;
+}
+
+.bg_pastel_blu_1 {
+	--bg: #82C8E2;
+	background-color: #82C8E2;
+}
+
+.pastel_blu_2 {
+	--c: #A4D7EC;
+	color : #A4D7EC;
+}
+
+.bg_pastel_blu_2 {
+	--bg: #A4D7EC;
+	background-color : #A4D7EC;
+}
+
+.pastel_red_1 {
+	--c: #FF9288;
+	color: #FF9288;
+}
+
+.bg_pastel_red_1 {
+	--bg: #FF9288;
+	background-color: #FF9288;
+}
+
+.pastel_red_2 {
+	--c: #FF625E;
+	color: #FF625E;	
+}
+
+.bg_pastel_red_2 {
+	--bg: #FF625E;
+	background-color: #FF625E;	
+}
+
+.pastel_yel_1 {
+	--c: #FFFEC3;
+	color: #FFFEC3;
+}
+
+.bg_pastel_yel_1 {
+	--bg: #FFFEC3;
+	background-color: #FFFEC3;
+}
+
+.pastel_yel_2 {
+	--c: #F5EEA5;
+	color: #F5EEA5;
+}
+
+.bg_pastel_yel_2 {
+	--bg: #F5EEA5;
+	background-color: #F5EEA5;
+}
+
+
+.container {
+	background-color: #333;
+	padding: 1rem;
+	margin-top: 1rem;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.draggable {
+	padding: 1rem;
+	/*background-color: white;*/
+	border:  1px black;
+	cursor: move;
+}
+
+.draggable.dragging {
+	opacity: 0.5;
+}
