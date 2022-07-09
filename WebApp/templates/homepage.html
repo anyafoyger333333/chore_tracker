@@ -15,6 +15,8 @@
 		<!-- for the correct modal jquery, import in the followinng order: (1) css, (2) jquery, (3) js -->
 		<!-- Compiled and minified CSS -->
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	    <!-- Custom css file being loaded below, must be loaded before the elements are created. -->
+	    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
 		<!-- Icon resources-->
 		<!-- Google Material Icons -->
@@ -24,34 +26,37 @@
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 		
-		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-		<script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
-		<script type="text/javascript" src="{{ url_for('static', filename='js/chart.min.js') }}"></script>
+		
 	</head>
 
-	<body style="background-color:#263238;">
+	<body class="bg_pastel_blu_1">
 		<!-- NavBar -->
-		<nav>
+		<nav class="bg_pastel_red_2">
 		    <div class="nav-wrapper">
-		    	<a href="#" class="brand-logo">Logo</a>
+		    	<a href="#" class="brand-logo">Chore Tracker</a>
 		      	<ul id="nav-mobile" class="right hide-on-med-and-down">
-		        	<li><a href="sass.html">Sass</a></li>
-		        	<li><a href="badges.html">Components</a></li>
-		        	<li><a href="collapsible.html">JavaScript</a></li>
+		        	<li><a href="#">Chores</a></li>
+		        	<li><a href="#">Owners</a></li>
+		        	<li><a href="#">Performance</a></li>
 		      	</ul>
 		    </div>
 		</nav>
 
-
-		<h1>Hello World</h1>
+		<div class="container bg_pastel_yel_1">
+		  <p draggable="true" class="draggable bg_pastel_blu_1">A</p>
+		  <p draggable="true" class="draggable bg_pastel_blu_2">B</p>
+		  <p draggable="true" class="draggable bg_pastel_yel_1">C</p>
+		</div>
 		<div class="container">
-		  <div draggable="true" class="box">A</div>
-		  <div draggable="true" class="box">B</div>
-		  <div draggable="true" class="box">C</div>
+		  <p draggable="true" class="draggable bg_pastel_yel_2">1</p>
+		  <p draggable="true" class="draggable bg_pastel_red_1">2</p>
+		  <p draggable="true" class="draggable bg_pastel_red_2">3</p>
 		</div>
 
 		<!-- Compiled and minified JavaScript -->
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	    <!-- Custom js file being loaded after all elements have been created to ensure js works according to the available elements. -->
+	    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 	</body>
 	
 	
