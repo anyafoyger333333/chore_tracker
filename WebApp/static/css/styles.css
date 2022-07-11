@@ -81,3 +81,64 @@ They are defined as custom class names below
 .draggable.dragging {
 	opacity: 0.5;
 }
+
+/*
+Calendar Styling
+*/
+
+li {
+	list-style: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.calendar-container {
+	display: grid;
+	grid-template-columns: 50px auto;
+	grid-template-rows: auto;
+	gap: 1px 1px;
+	grid-template-areas: 
+	". header"
+	"timeslots-container main";
+}
+
+.weekdays,
+.daynumbers {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	text-align: center;
+}
+
+
+.header {
+	grid-area: header;
+}
+
+.timeslots-container {
+	background: #333;
+	grid-area: timeslots-container;
+	justify-content: left;
+}
+
+.timeslots {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.timeslots li {
+	min-height: 60px;
+}
+
+.timeslots li::after {
+	content: "";
+	position: absolute;
+	left: 10px;
+	width: 100%;
+	height: 1px;
+	background: lightgray;
+	z-index: 1;
+}
