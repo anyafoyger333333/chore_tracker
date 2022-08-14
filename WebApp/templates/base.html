@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<!-- This file will serve as the main template format to avoid redundant html across multiple template files -->
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<title>Chore Tracker</title>
+		<!-- Adjusts the content to fit mobile device displays. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!--Import materialize support js and css files-->
+		
+		<!-- javascript had to be placed above the css load for materialize related javascript objects to be used. -->
+		<!-- for the correct modal jquery, import in the followinng order: (1) css, (2) jquery, (3) js -->
+		<!-- Compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	    <!-- Custom css file being loaded below, must be loaded before the elements are created. -->
+	    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+		<!-- Icon resources-->
+		<!-- Google Material Icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!-- Ion Icons -->
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		
+		
+	</head>
+
+	<body class="bg_pastel_blu_1">
+		<!-- NavBar -->
+		<nav class="bg_pastel_red_2">
+		    <div class="nav-wrapper">
+		    	<a href="/" class="brand-logo">Chore Tracker</a>
+		      	<ul id="nav-mobile" class="right hide-on-med-and-down">
+		        	<li><a href="/">Home</a></li>
+		        	<li><a href="/admin">Admin</a></li>
+		        	<li><a href="#">Owners</a></li>
+		        	<li><a href="#">Performance</a></li>
+		      	</ul>
+		    </div>
+		</nav>
+
+        {% block content %}
+        {% endblock %}
+		<!--div class="container bg_pastel_yel_1">
+		  <p draggable="true" class="draggable bg_pastel_blu_1">A</p>
+		  <p draggable="true" class="draggable bg_pastel_blu_2">B</p>
+		  <p draggable="true" class="draggable bg_pastel_yel_1">C</p>
+		  <p draggable="true" class="draggable bg_pastel_yel_1">D</p>
+		</div>
+		<div class="container">
+		  <p draggable="true" class="draggable bg_pastel_yel_2">1</p>
+		  <p draggable="true" class="draggable bg_pastel_red_1">2</p>
+		  <p draggable="true" class="draggable bg_pastel_red_2">3</p>
+		  <p draggable="true" class="draggable bg_pastel_red_2">4</p>
+		</div-->
+
+		
+
+		<!-- Compiled and minified JavaScript -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	    <!-- Custom js file being loaded after all elements have been created to ensure js works according to the available elements. -->
+	    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+	</body>
+	
+	
+
+</html>
