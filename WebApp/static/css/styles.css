@@ -71,6 +71,24 @@ They are defined as custom class names below
 	border-bottom-right-radius: 20px;
 }
 
+.scrollable-item-container {
+	background-color: #333;
+	padding: 1rem;
+	position: absolute;
+	left: 100px;
+	margin-top: 1rem;
+	border-radius: 1%;
+	max-height: 400px;
+    cursor: grab;
+    overflow: auto;
+}
+
+.item-card {
+	padding: 2rem;
+	margin: 1rem;
+	border-radius: 5px;
+}
+
 .draggable {
 	padding: 1rem;
 	/*background-color: white;*/
@@ -141,4 +159,9 @@ ul {
 	height: 1px;
 	background: lightgray;
 	z-index: 1;
+}
+
+.slot {
+	position: absolute;
+	background: #A4D7EC;
 }
