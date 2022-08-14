@@ -8,8 +8,12 @@ app = Flask(__name__)
 
 # First page/screen seen when going to the site 
 @app.route('/')
-def hello_world():
+def load_homepage():
     return render_template('homepage.html')
+
+@app.route('/admin')
+def load_adminpage():
+    return render_template('admin.html')
 
 # Runs the app when this file is executed, with the IP address
 # of the computer is running on as server for the webapp
