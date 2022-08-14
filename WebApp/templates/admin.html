@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>ADMIN</h1>
+<div class="row">
+    <div id="scrollable-participants-container" class="scrollable-item-container col s4">
+        <div class="item-card bg_pastel_red_1">1</div>
+        <div class="item-card bg_pastel_red_1">2</div>
+        <div class="item-card bg_pastel_red_1">3</div>
+        <div class="item-card bg_pastel_red_1">4</div>
+        <div class="item-card bg_pastel_red_1">5</div>
+        <div class="item-card bg_pastel_red_1">6</div>
+    </div>
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/admin.js') }}"></script>
+{% endblock %}
