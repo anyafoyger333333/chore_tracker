@@ -1,37 +1,48 @@
-const ele = document.getElementById('scrollable-participants-container');
-//ele.scrollTop = 100;
-//ele.scrollLeft = 150;
+document.addEventListener('DOMContentLoaded', function () {
+    const ele = document.getElementById('scrollable-participants-container');
+    ele.style.cursor = 'grab';
 
-let pos = { top: 0, left: 0, x: 0, y: 0 };
-console.log("loading the admin pg")
-const mouseDownHandler = function (e) {
-    pos = {
-        // The current scroll
-        left: ele.scrollLeft,
-        top: ele.scrollTop,
-        // Get the current mouse position
-        x: e.clientX,
-        y: e.clientY,
+    let pos = { top: 0, left: 0, x: 0, y: 0 };
+
+    const mouseDownHandler = function (e) {
+        ele.style.cursor = 'grabbing';
+        ele.style.userSelect = 'none';
+
+        pos = {
+            left: ele.scrollLeft,
+            top: ele.scrollTop,
+            // Get the current mouse position
+            x: e.clientX,
+            y: e.clientY,
+        };
+
+        //console.log("mouseDownHandler running");
+
+        document.addEventListener('mousemove', mouseMoveHandler);
+        document.addEventListener('mouseup', mouseUpHandler);
     };
 
-    document.addEventListener('mousemove', mouseMoveHandler);
-    document.addEventListener('mouseup', mouseUpHandler);
-};
+    const mouseMoveHandler = function (e) {
+        // How far the mouse has been moved
+        const dx = e.clientX - pos.x;
+        const dy = e.clientY - pos.y;
 
-const mouseMoveHandler = function (e) {
-    // How far the mouse has been moved
-    const dx = e.clientX - pos.x;
-    const dy = e.clientY - pos.y;
+        //console.log("mouseMoveHandler running");
 
-    // Scroll the element
-    ele.scrollTop = pos.top - dy;
-    ele.scrollLeft = pos.left - dx;
-};
+        // Scroll the element
+        ele.scrollTop = pos.top - dy;
+        ele.scrollLeft = pos.left - dx;
+    };
 
-const mouseUpHandler = function () {
-    document.removeEventListener('mousemove', mouseMoveHandler);
-    document.removeEventListener('mouseup', mouseUpHandler);
+    const mouseUpHandler = function () {
+        ele.style.cursor = 'grab';
+        ele.style.removeProperty('user-select');
 
-    ele.style.cursor = 'grab';
-    ele.style.removeProperty('user-select');
-};
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        document.removeEventListener('mouseup', mouseUpHandler);
+        //console.log("mouseUpHandler running");
+    };
+
+    // Attach the handler
+    ele.addEventListener('mousedown', mouseDownHandler);
+});
