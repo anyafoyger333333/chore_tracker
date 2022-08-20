@@ -40,9 +40,23 @@
 		        	<li><a href="#">Owners</a></li>
 		        	<li><a href="#">Performance</a></li>
 		      	</ul>
+
+				<div class="row">
+					<!-- Dropdown Trigger -->
+					<a class='dropdown-trigger btn transparent hide-on-large-only' style="height: 100%; width: auto;" href='#' data-target='dropdown1'><i class="material-icons style="line-height:2.5; height: 100% ;vertical-align:middle;">menu</i></a>
+
+					<!-- Dropdown Structure -->
+					<ul id="dropdown1" class="dropdown-content" data-constrainWidth="false"  data-hover="true" style="width: auto;">
+						<li><a href="/">Home</a></li>
+						<li><a href="/admin">Admin</a></li>
+						<li><a href="#">Owners</a></li>
+						<li><a href="#">Performance</a></li>
+					</ul>
+				</div>
 		    </div>
 		</nav>
-
+        
+        
         {% block content %}
         {% endblock %}
 		<!--div class="container bg_pastel_yel_1">
@@ -63,6 +77,7 @@
 		<!-- Compiled and minified JavaScript -->
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	    <!-- Custom js file being loaded after all elements have been created to ensure js works according to the available elements. -->
+	    <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}"></script>
 	    <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 	</body>
 	
